@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hunter x Hunter Web Dev</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 220px 1fr 300px;
+            grid-template-rows: 150px auto;
+            grid-template-areas:
+                "header header header"
+                "sidebar main aside";
+            height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #ccc;
+        }
+
+        .header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #ccc;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sidebar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        .main {
+            grid-area: main;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 1px solid #ccc;
+        }
+
+        .main iframe {
+            width: 100%;
+            height: 330px;
+            margin-bottom: 20px;
+        }
+
+        .aside {
+            grid-area: aside;
+            background-color: #f9f9f9;
+            padding: 20px;
+            overflow-y: auto;
+            border-left: 1px solid #ccc;
+        }
+
+        .character-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .character-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .character-card h3 {
+            margin-bottom: 5px;
+            color: #222;
+        }
+
+        .character-card p {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        @media screen and (max-width: 900px) {
+            body {
+                overflow: auto;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "aside";
+                height: auto;
+            }
+
+            .sidebar {
+                flex-direction: row;
+                overflow-x: auto;
+            }
+
+            .sidebar a {
+                flex: 1;
+                text-align: center;
+                border-bottom: none;
+                border-right: 1px solid #ddd;
+            }
+
+            .aside {
+                border-left: none;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "aside";
+                height: auto;
+            }
+
+            body {
+                overflow: auto;
+            }
+
+            .aside {
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <img src="banner.jpg" alt="Banner">
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="Hxh.html">Home</a>
+            <a class="active" href="emmiter.html">Emmiter</a>
+            <a href="enhancer.html">Enhancer</a>
+            <a href="manipulator.html">Manipulator</a>
+            <a href="specialist.html">Specialist</a>
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+            <iframe width="1236" height="695" src="https://www.youtube.com/embed/3_q43qpNgRQ"
+                title="Nen Emission Explained | Hunter X Hunter" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <p>
+                Emitter (放ほう出しゅつ, Hōshutsu). An affinity for Emission (放ほう出しゅつ系けい, Hōshutsu-kei; abbrev. as 放)
+                means that a user has an easier time separating their aura from their body. Due to its properties,
+                Emission is typically employed in abilities with an emphasis on range and/or those that have
+                long-lasting
+                effects. Basic applications include shooting out projectiles or beams of aura at high speed.
+            </p>
+        </div>
+
+        <!-- Aside -->
+        <div class="aside">
+            <div class="character-card">
+                <img
+                    src="https://static.wikia.nocookie.net/hunterxhunter/images/7/73/HxH2011_EP145_Leorio_Portrait.png/revision/latest?cb=20230902193715">
+                <h3>Leorio Paradinight</h3>
+                <p><strong>Nen Type:</strong> Emitter</p>
+                <p>Leorio channels his aura to project energy outward. His emission-based abilities allow him to extend
+                    his attacks over a distance.</p>
+            </div>
+
+            <div class="character-card">
+                <img src="https://static.wikia.nocookie.net/hunterxhunter/images/2/27/RazorFullbody.png/revision/latest?cb=20170724201543"
+                    alt="Razor">
+                <h3>Razor</h3>
+                <p><strong>Nen Type:</strong> Emitter</p>
+                <p>As the Game Master of Greed Island, Razor uses Emission to control powerful aura balls, showcasing
+                    his
+                    exceptional long-range power and precision.</p>
+            </div>
+
+            <div class="character-card">
+                <img src="https://static.wikia.nocookie.net/hunterxhunter/images/6/62/HxH2011_EP58_Franklin_Portrait.png/revision/latest?cb=20230122063251"
+                    alt="Franklin Bordeau">
+                <h3>Franklin Bordeau</h3>
+                <p><strong>Nen Type:</strong> Emitter</p>
+                <p>Franklin fires rapid aura bullets from his fingers, a perfect example of Emission used for ranged
+                    destructive attacks.</p>
+            </div>
+
+            <div class="character-card">
+                <img src="https://static.wikia.nocookie.net/hunterxhunter/images/4/47/Leol_anime.png/revision/latest?cb=20130519034558"
+                    alt="Leol">
+                <h3>Leol</h3>
+                <p><strong>Nen Type:</strong> Emitter</p>
+                <p>Leol’s versatile emission abilities allow him to separate his aura and adapt it for powerful
+                    mid-distance combat techniques.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hunter x Hunter Web Dev</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Lato", sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 220px 1fr 300px;
+      grid-template-rows: 150px auto;
+      grid-template-areas:
+        "header header header"
+        "sidebar main aside";
+      height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #ccc;
+    }
+
+    .header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ccc;
+    }
+
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .sidebar a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .sidebar a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+
+    .main {
+      grid-area: main;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+    }
+
+    .main iframe {
+      width: 100%;
+      height: 330px;
+      margin-bottom: 20px;
+    }
+
+    .aside {
+      grid-area: aside;
+      background-color: #f9f9f9;
+      padding: 20px;
+      overflow-y: auto;
+      border-left: 1px solid #ccc;
+    }
+
+    .character-card {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .character-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .character-card h3 {
+      margin-bottom: 5px;
+      color: #222;
+    }
+
+    .character-card p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    @media screen and (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "main"
+          "aside";
+        height: auto;
+      }
+
+      body {
+        overflow: auto;
+      }
+
+      .aside {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <img src="banner.jpg" alt="Banner">
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a class="active" href="Hxh.html">Home</a>
+      <a href="emmiter.html">Emmiter</a>
+      <a href="enhancer.html">Enhancer</a>
+      <a href="manipulator.html">Manipulator</a>
+      <a href="specialist.html">Specialist</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <iframe width="1236" height="695" src="https://www.youtube.com/embed/jMR4CqqIWLo"
+        title="Nen Enhancement Explained | Hunter X Hunter" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <p>
+        Enhancer (強きょう化か, Kyōka). Enhancement (強きょう化か系けい, Kyōka-kei; abbrev. as 強) is the ability to use aura to
+        strengthen or increase the natural abilities of an object or one's own body. Enhancers are able to
+        increase their physical attack and defense greatly and are best suited for melee combat. In fact,
+        one's affinity for this category plays a crucial role in combat at all times, even when a Nen ability is
+        not being used.
+      </p>
+    </div>
+
+    <!-- Aside -->
+    <div class="aside">
+      <div class="character-card">
+        <img src="gon.png" alt="Gon Freecss">
+        <h3>Gon Freecss</h3>
+        <p><strong>Nen Type:</strong> Enhancer</p>
+        <p>Gon is an optimistic boy with incredible potential. His Enhancer abilities give him immense physical
+          power and straightforward combat strength.</p>
+      </div>
+
+      <div class="character-card">
+        <img src="uvogin.png" alt="Uvogin">
+        <h3>Uvogin</h3>
+        <p><strong>Nen Type:</strong> Enhancer</p>
+        <p>A member of the Phantom Troupe known for brute strength. His Enhancer nature amplifies his raw power,
+          making him one of the strongest physically.</p>
+      </div>
+
+      <div class="character-card">
+        <img src="biscuit.png" alt="Biscuit Krueger">
+        <h3>Biscuit Krueger</h3>
+        <p><strong>Nen Type:</strong> Enhancer</p>
+        <p>A professional Hunter who hides her true muscular form behind a cute appearance. Her Nen enhances her
+          physical strength immensely.</p>
+      </div>
+
+      <div class="character-card">
+        <img src="knuckle.png" alt="Knuckle Bine">
+        <h3>Knuckle Bine</h3>
+        <p><strong>Nen Type:</strong> Enhancer</p>
+        <p>Kind-hearted yet strong, Knuckle uses his Enhancer abilities for close combat and has a unique Nen
+          ability called APR (Amortizing Power Redirector).</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
